@@ -175,7 +175,7 @@ wtd.table <- function(x, weights=NULL, type=c('list','table'),
     if(type=='table')
       return(weights)
 
-    x <- all.is.numeric(names(weights), 'vector')
+    x <- as.numeric(names(weights))
     if(isdate)
       attributes(x) <- c(attributes(x),ax)
 
